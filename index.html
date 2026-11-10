@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CT Brain Trainer</title>
+<style>
+  body { font-family: system-ui, sans-serif; background:#111; color:#eee; margin:0; padding:16px; }
+  .disclaimer { background:#3a2a00; color:#ffd27a; padding:10px; border-radius:8px; font-size:14px; }
+  .card { background:#1c1c1c; border-radius:12px; padding:16px; margin-top:12px; }
+  img { width:100%; max-width:360px; display:block; margin:0 auto; border-radius:8px; background:#000; }
+  .opts { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:12px; }
+  button { padding:12px; border:none; border-radius:8px; background:#2a2a2a; color:#eee; font-size:15px; }
+  button:active { background:#3a3a3a; }
+  .correct { background:#1f4d2b !important; }
+  .wrong { background:#5a1f1f !important; }
+  .explain { margin-top:12px; font-size:15px; line-height:1.7; }
+  .score { margin-top:12px; font-size:14px; color:#aaa; }
+</style>
+</head>
+<body>
+
+<div class="disclaimer">تطبيق تعليمي فقط. ليس للتشخيص السريري.</div>
+
+<div class="card">
+  <div id="counter" style="font-size:14px;color:#aaa;"></div>
+  <img id="scan" alt="CT brain axial">
+  <p>اختار التشخيص الأقرب للصورة:</p>
+  <div class="opts" id="opts"></div>
+  <div class="explain" id="explain"></div>
+  <div style="margin-top:12px;"><button id="next" style="display:none;width:100%;">الحالة التالية</button></div>
+</div>
+
+<div class="score" id="score"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
